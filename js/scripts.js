@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-    $("ul#contacts").append("<li><span class='newFirstName'>" + newContact.firstName + newContact.lastName + "</span></li>");
+    $("ul#contacts").append("<li><span class='newFirstName'>" + newContact.firstName + " " + newContact.lastName + "</span></li>");
 
     $(".contact").last().click(function() {
       $("#displayContact").show();
