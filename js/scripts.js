@@ -1,7 +1,7 @@
 function Contact(first, last) {
   this.firstName = first;
   this.lastName = last;
-  this.address = [];
+  // this.address = [];
 }
 
 Contact.prototype.fullName = function() {
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-    $("ul#contacts").append("<li><span class='newFirstName'>" newContact.fullName() "</span></li>");
+    $("ul#contacts").append("<li><span class='newFirstName'>" + newContact.fullName() + "</span></li>");
 
     $(".contact").last().click(function() {
       $("#displayContact").show();
