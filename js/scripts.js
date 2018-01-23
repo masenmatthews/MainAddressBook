@@ -4,6 +4,9 @@ function Contact(first, last) {
   this.address = [];
 }
 
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+
 function Address(street, city, state) {
   this.street = street;
   this.city = city;
@@ -19,7 +22,7 @@ $(document).ready(function() {
 
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-    $("ul#contacts").append("<li><span class='newFirstName'>" + newContact.fullName + "</span></li>");
+    $("ul#contacts").append("<li><span class='newFirstName'>" newContact.fullName() "</span></li>");
 
     $(".contact").last().click(function() {
       $("#displayContact").show();
