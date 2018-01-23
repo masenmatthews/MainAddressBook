@@ -6,6 +6,7 @@ function Contact(first, last) {
 
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
+}
 
 function Address(street, city, state) {
   this.street = street;
